@@ -1,0 +1,21 @@
+#!/bin/bash
+yum update -y
+yum install -y git httpd
+systemctl enable httpd 
+systemctl start httpd
+yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
+yum install nodejs -y
+cd /var/www/html
+git clone https://github.com/betuah/lks-apps-one.git
+mv lks-apps-one/* ./
+rm -rf server
+rm -rf exam
+cd client
+npm install 
+echo "API_URL=YOUR_API_BACKEND_SERVER_HOST \n API_EXAM_URL=YOUR_API_BACKEND_SERVER_HOST " > .env
+npm run generate
+cp dist/* /var/www/html
+
+
+
