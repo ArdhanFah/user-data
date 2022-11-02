@@ -10,21 +10,6 @@ mv lks-apps-one/* ./
 rm -rf client
 rm -rf exam
 cd server
-echo "NODE_ENV=production \n
-PORT=8000 \n
-DB_TYPE=mysql \n
-MYSQL_DB=db_campus \n
-MYSQL_USERNAME=admin \n
-MYSQL_PASSWORD=admin123456db \n
-MYSQL_HOST=database-campus.cluster-cfa24763haxo.us-east-2.rds.amazonaws.com \n
-MYSQL_PORT=3306 \n
-REDIS_HOST=master.myredis.9ez68d.use2.cache.amazonaws.com:6379 \n
-REDIS_PORT=6379 \n
-REDIS_PASSWORD=admin123456db \n
-AWS_ACCESS_KEY=AKIA4ETX7JVRR7PQGW7E \n
-AWS_SECRET_ACCESS_KEY=W0bx0C2OklQdWTDHAYeZqo7O8GOmTPWYyvY1Q/0z \n
-AWS_BUCKET_NAME=abucketme \n
-LOG_PATH=YOUR_LOG_FOLDER_LOCATION
-CACHE_PATH=YOUR_CACHE_PATH_FILE_LOCATION_STO " > .env
+echo "NODE_ENV=production\nPORT=8000\nDB_TYPE=mysql\nMYSQL_DB=db_campus\nMYSQL_USERNAME=admin\nMYSQL_PASSWORD=admin123456db\nMYSQL_HOST=database-1.cluster-cfa24763haxo.us-east-2.rds.amazonaws.com\nMYSQL_PORT=3306\nREDIS_HOST=master.myredis.9ez68d.use2.cache.amazonaws.com\nREDIS_PORT=6379\nREDIS_PASSWORD=admin123456redis\nAWS_ACCESS_KEY=AKIA4ETX7JVRR7PQGW7E\nAWS_SECRET_ACCESS_KEY=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\nAWS_BUCKET_NAME=bucketmea\nLOG_PATH=/var/www/html/server/tmp\nCACHE_PATH=/var/www/html/server/logs" > .env
 npm install
 npm run start-prod
