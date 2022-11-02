@@ -13,7 +13,7 @@ rm -rf server
 rm -rf exam
 cd client
 npm install 
-echo "API_URL=YOUR_API_BACKEND_SERVER_HOST \n API_EXAM_URL=YOUR_API_BACKEND_SERVER_HOST " > .env
+echo "API_URL=YOUR_API_BACKEND_SERVER_HOST\nAPI_EXAM_URL=YOUR_API_BACKEND_SERVER_HOST" > .env
 npm run generate
 cp dist/* /var/www/html
 
