@@ -1,0 +1,30 @@
+#!/bin/bash
+yum update -y
+yum install git -y
+yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
+yum install -y nodejs
+cd /var/www/html
+git clone https://github.com/betuah/lks-apps-one.git
+mv lks-apps-one/* ./
+rm -rf client
+rm -rf exam
+cd server
+echo "NODE_ENV=production \n
+PORT=8000 \n
+DB_TYPE=mysql \n
+MYSQL_DB=db_campus \n
+MYSQL_USERNAME=admin \n
+MYSQL_PASSWORD=admin123456db \n
+MYSQL_HOST=database-campus.cluster-cfa24763haxo.us-east-2.rds.amazonaws.com \n
+MYSQL_PORT=3306 \n
+REDIS_HOST=master.myredis.9ez68d.use2.cache.amazonaws.com:6379 \n
+REDIS_PORT=6379 \n
+REDIS_PASSWORD=admin123456db \n
+AWS_ACCESS_KEY=AKIA4ETX7JVRR7PQGW7E \n
+AWS_SECRET_ACCESS_KEY=W0bx0C2OklQdWTDHAYeZqo7O8GOmTPWYyvY1Q/0z \n
+AWS_BUCKET_NAME=abucketme \n
+LOG_PATH=YOUR_LOG_FOLDER_LOCATION
+CACHE_PATH=YOUR_CACHE_PATH_FILE_LOCATION_STO " > .env
+npm install
+npm run start-prod
