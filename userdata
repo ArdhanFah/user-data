@@ -14,7 +14,7 @@ cd client
 npm install 
 echo "API_URL=172.16.2.133:8000\nAPI_EXAM_URL=YOUR_API_BACKEND_SERVER_HOST" > .env
 npm run generate
-cp dist/* /var/www/html
+cp -r dist/* /var/www/html/
 
 
 
