@@ -16,4 +16,4 @@ npm install
 npm run start-prod
 mount -t efs -o tls fs-04f41fd2740c23ee6:/ /var/www/html/server/tmp
 mount -t efs -o tls fs-04f41fd2740c23ee6:/ /var/www/html/server/logs
-reboot
+
