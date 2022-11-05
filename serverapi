@@ -11,9 +11,8 @@ git clone https://github.com/betuah/lks-apps-one.git ./
 rm -rf client
 rm -rf exam
 cd server
-echo "NODE_ENV=production\nPORT=8000\nDB_TYPE=aurora_mysql\nMYSQL_DB=db_campus\nMYSQL_USERNAME=admindb\nMYSQL_PASSWORD=admin123456db\nMYSQL_HOST=campus.cluster-cfa24763haxo.us-east-2.rds.amazonaws.com\nMYSQL_PORT=3306\nREDIS_HOST=master.myredis.9ez68d.use2.cache.amazonaws.com\nREDIS_PORT=6379\nREDIS_PASSWORD=admin123456redis\nAWS_ACCESS_KEY=AKIA4ETX7JVRR7PQGW7E\nAWS_SECRET_ACCESS_KEY=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\nAWS_BUCKET_NAME=bucketmea\nLOG_PATH=/var/www/html/server/logs\nCACHE_PATH=/var/www/html/server/tmp" > .env
+echo "a" > .env
 npm install
 npm run start-prod
-mount -t efs -o tls fs-092e5a8c97d2e31c8:/ /var/www/html/server/tmp
-mount -t efs -o tls fs-092e5a8c97d2e31c8:/ /var/www/html/server/logs
+
 
