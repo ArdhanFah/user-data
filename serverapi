@@ -1,6 +1,6 @@
 #!/bin/bash
 yum update -y
-yum install https git -y
+yum install httpd git -y
 systemctl enable httpd
 systemctl start httpd
 yum install -y gcc-c++ make
