@@ -10,8 +10,12 @@ git clone https://github.com/betuah/lks-apps-one.git ./
 rm -rf client/
 rm -rf exam/
 cd server
-echo "" > .env
+https://raw.githubusercontent.com/ArdhanFah/user-data/main/.env
 npm install
 npm run start-prod
+mkdir -p tmp/
+mount -t efs -o tls fs-02e6989fbbe5b3c0b:/ /var/www/html/server/logs
+mount -t efs -o tls fs-02e6989fbbe5b3c0b:/ /var/www/html/server/tmp
+reboot
 
 
