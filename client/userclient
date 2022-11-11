@@ -1,6 +1,4 @@
-
 #!/bin/bash
-yum update -y
 yum install -y git httpd
 systemctl enable httpd 
 systemctl start httpd
@@ -13,6 +11,6 @@ rm -rf server
 rm -rf exam
 cd client
 npm install 
-echo "API_URL=172.16.2.133:8000\nAPI_EXAM_URL=YOUR_API_BACKEND_SERVER_HOST" > .env
+wget https://raw.githubusercontent.com/ArdhanFah/user-data/main/client/.env
 npm run generate
 cp -r dist/* /var/www/html/
