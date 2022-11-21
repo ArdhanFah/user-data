@@ -10,7 +10,7 @@ rm -rf client/
 cd exam/
 wget https://raw.githubusercontent.com/ArdhanFah/user-data/main/exam/.env
 cd ssl/
-wget 
+wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
 cd ..
 yum install -y gcc-c++ make
 curl -sL https://rpm.nodesource.com/setup_16.x | sudo -E bash -
