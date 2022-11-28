@@ -13,6 +13,6 @@ wget https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem
 cd ..
 yum install -y gcc-c++ make
 curl -sL https://rpm.nodesource.com/setup_14.x | sudo -E bash -
-yum install nodejs -y
+yum install -y nodejs
 npm install
 npm run start-prod
