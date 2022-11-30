@@ -15,5 +15,5 @@ npm install
 npm run start-prod
 yum install amazon-efs-utils -y
 mkdir -p tmp/
-mount -t efs -o tls fs-01961f16820897011:/ /var/www/html/server/logs
-mount -t efs -o tls fs-01961f16820897011:/ /var/www/html/server/tmp
+mount -t efs -o tls fs-0a511774aedd80f7a:/ /var/www/html/server/logs
+mount -t efs -o tls fs-0a511774aedd80f7a:/ /var/www/html/server/tmp
