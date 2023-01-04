@@ -15,5 +15,5 @@ npm install
 npm run start-prod
 yum install amazon-efs-utils -y
 mkdir -p tmp/
-mount -t efs -o tls fs-09fbb236162c215ea:/ /var/www/html/server/logs
-mount -t efs -o tls fs-09fbb236162c215ea:/ /var/www/html/server/tmp
+mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0eab594a570eea497.efs.us-east-2.amazonaws.com:/logs /var/www/html/server/logs
+mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-0eab594a570eea497.efs.us-east-2.amazonaws.com:/tmp /var/www/html/server/tmp
